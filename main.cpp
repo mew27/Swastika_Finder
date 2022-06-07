@@ -8,6 +8,10 @@
 
 #include <QGuiApplication>
 
+/* MODIFY THESE PATHS */
+QString pi_hex_digits_dir = "/home/paolo/Scaricati/pi_hex_1b";
+QString output_pic_folder = "/home/paolo/Swastika_PI/Pics";
+
 char getBit(const QByteArray& pi_byte, long long bitpos) {
 
     if (bitpos == 0)
@@ -74,7 +78,7 @@ int main(int argc, char *argv[])
 {
     QGuiApplication a(argc, argv);
 
-    QFile file("/home/paolo/Scaricati/pi_hex_1b/pi_hex_1b.txt");
+    QFile file(pi_hex_digits_dir + "/pi_hex_1b.txt");
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         std::cout << "Errore !" << std::endl;
@@ -99,7 +103,7 @@ int main(int argc, char *argv[])
 
         QPainter painter(&image);
 
-        QFile output_image("/home/paolo/Swastika_PI/Pics/Outputpic_" + QString::number(swastika_pos) + ".png");
+        QFile output_image(output_pic_folder + "/Outputpic_" + QString::number(swastika_pos) + ".png");
 
         painter.setBrush(whiteBrush);
 
