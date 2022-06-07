@@ -1,6 +1,9 @@
 # Swastika_Finder
 Finds all the swastikas in the binary representation of pi.
 
-It will output in the Pics/ folder images representing the swastika found. 
+It will output in the Pics/ folder images representing the swastika found. Each black square represent a zero, and each white square represent
+a one. The squares are organized in a 5x25 grid. In red is highlighted the swastika.
 
-[immagine](https://user-images.githubusercontent.com/46501344/172484096-97d3659a-7b1d-4a43-a340-139184740b22.png)
+Example pic : 
+
+![Screenshot](Outputpic_204238641.png)
